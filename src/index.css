@@ -513,9 +513,6 @@ nav div {
   margin-right: 32px;
 }
 
-.iconHolder-Me a:visited, .iconHolder-Me a:link, .iconHolder-Me a:hover, .iconHolder-Me a:active{
-}
-
 .project-list {
   width: 100%;
   margin: 32px auto;
@@ -672,7 +669,7 @@ nav div {
 .description {
   text-align: center;
   padding: 0px 12px 12px 12px;
-  transform: translateY(-10px);
+  transform: translateY(-20px);
   color: #666;
 }
 
