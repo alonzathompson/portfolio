@@ -523,6 +523,7 @@ nav div {
   background-attachment: fixed;
   position: relative;
   padding-bottom: 96px;
+  overflow-x:hidden;
 }
 
 .p-list-header {
@@ -565,7 +566,6 @@ nav div {
   max-height: 500px;
   border-radius: 12px;
   margin: 0 auto;
-  
   position: relative;
 }
 
@@ -1148,9 +1148,15 @@ text-shadow: 0px 0px 50px rgba(140,0,0,0.5);
   display: none;
 }
 
-@media screen and (max-height: 400px) {
-  .description {
-    display: none;
+@media screen and (max-height: 500px) {
+  .cardFront p {
+    transform: translateX(-70px) translateY(71px);
+  }
+
+  .cardBackPic {
+    background-size: cover !important;
+    width: 100%;
+    height: 200px;
   }
 }
 
