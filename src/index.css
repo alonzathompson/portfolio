@@ -672,6 +672,7 @@ nav div {
 .description {
   text-align: center;
   padding: 0px 12px 12px 12px;
+  transform: translateY(-10px);
   color: #666;
 }
 
