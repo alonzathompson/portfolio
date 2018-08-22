@@ -2,6 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://alonzathompson.github.io/portfolio"
   "dependencies": {
     "animate.css": "^3.7.0",
     "axios": "^0.18.0",
@@ -12,6 +13,8 @@
     "smoothscroll-polyfill": "^0.4.3"
   },
   "scripts": {
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
