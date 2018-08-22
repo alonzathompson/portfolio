@@ -30,9 +30,9 @@ class Basic2 extends Component {
               A studious learner of all things web, I'm addicted to getting better at code and 
               understanding software architecture. Currently I am learning Python and Docker 
               while getting stronger at Javascript and React.
-              When I'm not enguaged in development, I enjoy analyzing and creating music. I also 
-              love art, drawing
-
+              When I'm not enguaged in development, I enjoy analyzing movies, music and art. 
+              The desicions made in the creative process to get to the final product
+              fascinates me.
             </p>
           </div>
           <div className="iconHolder-Me">
