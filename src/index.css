@@ -338,22 +338,22 @@ nav div {
   content:"";
   position: absolute;
   height: 5px;
-  width: 100px;
+  width: 60px;
   vertical-align: middle;
-  background: rgb(236, 245, 255);
+  background: rgb(175, 212, 252);
   top: 50%;
-  left: Calc(-50% - 20px);
+  left: Calc(-50% + 20px);
 }
 
 .blockDiv:after {
   content:"";
   position: absolute;
   height: 5px;
-  width: 100px;
+  width: 60px;
   vertical-align: middle;
-  background: rgb(236, 245, 255);
+  background: rgb(175, 212, 252);
   top: 50%;
-  right: Calc(-50% - 20px);
+  right: Calc(-50% + 20px);
 }
 
 .block2 h2{
@@ -620,7 +620,15 @@ nav div {
   box-shadow: 0px 0px 30px 20px rgba(12, 1, 39, 0.5),
               0px 0px 0px 20px rgba(17, 152, 241, 0.75),
               0px 0px 20px 5px rgba(12, 1, 39, 0.5);
+  transition: box-shadow .2s ease-in;
 } 
+
+.cardFront a:active {
+  transform: translateY(3px);
+  box-shadow: 0px 0px 30px 20px rgba(12, 1, 39, 0.5),
+              0px 0px 0px 300px rgba(17, 152, 241, 0.75),
+              0px 0px 20px 5px rgba(12, 1, 39, 0.5);
+}
 
 .cardFront i {
   text-shadow: 0 3px 10px rgba(0,0,0,0.5);
@@ -1065,24 +1073,6 @@ text-shadow: 0px 0px 50px rgba(140,0,0,0.5);
 
   .nav-button {
     font-size: 2vw;
-  }
-
-  .totally {
-    width: 70%;
-
-  }
-
-  .totally h2{
-    font-size: 5rem;
-  }
-
-  .mobile h2 {
-    font-size: 5rem;
-  }
-
-  .mobile {
-    width: 80%;
-    
   }
 
   .clouds { 

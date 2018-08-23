@@ -121,7 +121,7 @@ class ProjectList extends Component {
         iconWholeAnim: "",
         iconFinishAnim: ""
       })
-    }, 1600)
+    }, 2000)
   }
 
   handleCardFlipToBack(){

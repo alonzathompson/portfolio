@@ -25,17 +25,21 @@ class GraphicBlockB extends Component{
           <div 
             style={{
             borderRadius: "50%",
-            border: "10px solid #ecf5ff",
+            border: "10px solid rgb(175, 212, 252)",
             background: `url(${me}) no-repeat`,
             backgroundSize: "cover",
             width: "100%",
-            height: "100%"
+            height: "100%",
+            boxShadow: "inset 0px 0px 10px 4px rgba(0,0,0,0.5)"
             }}
           />
         </div>
 
         <div className="gbTextHolder">
-          <h2>Would love to hear from you.</h2>
+          <h2><b>Would love to hear from you.</b></h2>
+          <p style={{textAlign: "center"}}>If you want to colab or need some work done
+            send me a message* 
+          </p>
         </div>
       </div>
     )
