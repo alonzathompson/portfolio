@@ -89,7 +89,7 @@ p {
 }
 
 .loaderContainer {
-  position: fixed;
+  position: relative;
   z-index: 999;
   top: 0;
   background: rgb(3,123,215);
@@ -113,13 +113,8 @@ p {
   transform-style: preserve-3d;
 }
 
-.loaderHolder h1 {
-  font-size: 5vw;
-  font-weight: 700;
-}
-
 .loaderHolder i {
-  font-size: 20vw;
+  font-size: 30vw;
   animation: loaderAAnim 1s infinite ease-in-out;
 }
 
@@ -140,7 +135,7 @@ p {
 }
 
 @keyframes pageShowAnim {
-  90%{
+  100%{
     opacity: 0;
   }
 }

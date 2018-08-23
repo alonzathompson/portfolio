@@ -8,16 +8,7 @@ const LoaderA = (props) => {
              }}
         >
             <div className="loaderHolder animated bounceInRight">
-                <h1 className="animated flipInX delay-1s">WElcoMe</h1>
-                <i className="fa fa-spinner fa-5x " />
-                <h3 className="animated flipInY delay-2s"
-                    style={{ position: "absolute", 
-                             left: "5%",
-                             bottom: "10%" 
-                          }}
-                >
-                    OnE sEC
-                </h3>
+              <i className="fa fa-spinner fa-5x " />
             </div>
         </div>
     )
