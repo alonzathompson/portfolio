@@ -89,7 +89,7 @@ p {
 }
 
 .loaderContainer {
-  position: relative;
+  position: fixed;
   z-index: 999;
   top: 0;
   background: rgb(3,123,215);
