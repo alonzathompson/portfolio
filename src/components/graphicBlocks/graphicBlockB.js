@@ -37,7 +37,8 @@ class GraphicBlockB extends Component{
 
         <div className="gbTextHolder">
           <h2><b>Would love to hear from you.</b></h2>
-          <p style={{textAlign: "center"}}>If you want to colab or need some work done
+          <p style={{textAlign: "center"}}>
+            If you want to colab or need some work done
             send me a message* 
           </p>
         </div>

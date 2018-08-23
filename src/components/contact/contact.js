@@ -9,7 +9,9 @@ class Contact extends Component {
         email: "",
         message: "",
         formAnim: "",
-        submitText: "submit"
+        submitText: "submit",
+        showMessage: "none",
+        showMessageAnim: ""
       }
     }
 
@@ -29,13 +31,20 @@ class Contact extends Component {
       
       axios.post('https://aserver1.herokuapp.com/contact/portfolio', newContact)
         .then(rsp => {
-            console.log(rsp);
             this.setState({
               submitText: rsp.data.message,
               name: "",
               email: "",
               message: ""
             })
+
+            if(rsp.data.message === "ok"){
+              this.setState({
+                formAnim: "animated fadeOutLeft",
+                showMessage: "block",
+                showMessageAnim: "animated fadeInRight delay-2s"
+              })
+            }
           })
       } 
       
@@ -92,6 +101,16 @@ class Contact extends Component {
           >
           {this.state.submitText}
           </button>
+          <div className={`thankYou ${this.state.showMessageAnim}`} 
+               style={{
+                 display: this.state.showMessage,
+                 animationDelay: "1s"
+                 }}
+          >
+            <p>
+              I will get back to you
+            </p>
+          </div>
         </form>
         </div>
       )

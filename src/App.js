@@ -28,7 +28,6 @@ class App extends Component {
   }
   
   componentDidMount() {
-    window.addEventListener("load", function() { window. scrollTo(0, 0); });
     window.addEventListener("scroll", (e) => {
       if(window.scrollY >= 500){
         this.setState({
