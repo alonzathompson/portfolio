@@ -30,11 +30,11 @@ class ProjectList extends Component {
         {
           showing: `two`,
           link: "https://alonzathompson.github.io/vuesongtracker/#/",
-          icon: `fa fa-sticky-o fa-4x aria-hidden="true"`,
+          icon: `fa fa-sticky-note-o fa-4x aria-hidden="true"`,
           text: "Vue Song Tracker",
           pic: vuesong,
           alt: "song tracker application",
-          description: 'Application to save song, song tabular info, and words in one place. Made with Vue, Vue Routerand Materialize.'
+          description: 'Application to store songs, song tabular info, and words in one place. Made with Vue, Vue Router and Materialize.'
         },
         {
           showing: `three`,

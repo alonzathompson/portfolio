@@ -23,7 +23,7 @@ class GraphicBlockA extends Component {
           </div>
           <div className="cardContainer">
             <div className="cardBackground">
-              <i className="fa fa-cog"></i>
+              <i className="fa fa-sitemap"></i>
             </div>
 
             <div className="cardText">
@@ -36,7 +36,7 @@ class GraphicBlockA extends Component {
           </div>
           <div className="cardContainer">
             <div className="cardBackground">
-              <i className="fa fa-check"></i>
+              <i className="fa fa-server"></i>
             </div>
 
             <div className="cardText">
