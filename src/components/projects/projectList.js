@@ -4,6 +4,7 @@ import weather from '../../assets/weatherNewPortfolio.JPG';
 import calculator from '../../assets/calculator_PortfolioSmall.png';
 import wiki from '../../assets/wikiNewPortfolio.JPG';
 import redux from '../../assets/reduxNewPortfolioSmall.JPG';
+import vuesong from '../../assets/vuesongtracker.png';
 
 class ProjectList extends Component {
   constructor(props){
@@ -24,16 +25,16 @@ class ProjectList extends Component {
           text: "Weather",
           pic: weather,
           alt: "weather application",
-          description: "Weather app built with HTML, Vanilla Js, and Material design"
+          description: "Weather app built with HTML, Vanilla Js, and Materialize."
         },
         {
           showing: `two`,
-          link: "https://codepen.io/ar-traunworks/full/zaBBLL/",
-          icon: `fa fa-plus fa-4x aria-hidden="true"`,
-          text: "Calculator",
-          pic: calculator,
-          alt: "calculator application",
-          description: 'A basic calculator built with HTML, Vanilla Js, Css'
+          link: "https://alonzathompson.github.io/vuesongtracker/#/",
+          icon: `fa fa-sticky-o fa-4x aria-hidden="true"`,
+          text: "Vue Song Tracker",
+          pic: vuesong,
+          alt: "song tracker application",
+          description: 'Application to save song, song tabular info, and words in one place. Made with Vue, Vue Routerand Materialize.'
         },
         {
           showing: `three`,
