@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Nav from './components/nav/nav.js';
 import Body from './components/body.js';
-import LoaderA from './components/screenLoaders/loaderA.js';
 import './App.css';
 import smoothscroll from 'smoothscroll-polyfill';
 
@@ -14,7 +13,6 @@ class App extends Component {
       show: "block",
       ffClass: null,
       btnIcon: null,
-      showLoader: "block",
       projects: [
         {name:`projectA`},
         {name: "projectB"},
@@ -28,18 +26,6 @@ class App extends Component {
   }
   
   componentDidMount() {
-    window.addEventListener("scroll", (e) => {
-      if(window.scrollY >= 500){
-        this.setState({
-          clouds: ""
-        })
-      } else {
-        this.setState({
-          clouds: "cloudAnim 20s linear infinite"
-        })
-      }
-    })
-
     window.addEventListener("wheel", (e) => {
       if(e.deltaY > 0 || e.deltaY < 0){
         this.setState({
@@ -50,11 +36,9 @@ class App extends Component {
       capture: true,
       passive: true
     })
-
-    this.handleLoader();
   }
   
-  throttle(func, limit) {
+  /*throttle(func, limit) {
     let inThrottle
     return function() {
       const args = arguments
@@ -65,7 +49,7 @@ class App extends Component {
         setTimeout(() => inThrottle = false, limit)
       }
     }
-  }
+  }*/
   
   //handle Nav 
   handleNav() {
@@ -79,21 +63,10 @@ class App extends Component {
       })
     }
   }
-
-  handleLoader(){
-    setTimeout(() => {
-      this.setState({
-        showLoader: "none"
-      })
-    }, 6000);
-  }
   
   render() {
     return (
       <div>
-        <LoaderA 
-          isLoading={this.state.showLoader}
-        />
         <Nav showNav={this.state.navShow} handleClick={this.handleNav.bind(this)}/>
         <Body 
           proj={this.state.projects} 

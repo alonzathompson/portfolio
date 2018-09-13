@@ -33,7 +33,7 @@ class Footer extends Component {
             <a href="https://www.linkedin.com/in/alonza-thompson-507169108/" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-linkedin fa-3x" aria-hidden="true" ></i>
             </a>
-            <a href="" target="_blank"><i className="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
+            <a href="" target="_blank" rel="noopener noreferrer"><i className="fa fa-facebook fa-3x" aria-hidden="true"></i></a>
             <a href="https://www.twitter.com/Ar_traun_Works" target="_blank" rel="noopener noreferrer">
               <i className="fa fa-twitter fa-3x" aria-hidden="true"></i>
             </a>

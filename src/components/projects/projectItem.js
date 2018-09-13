@@ -14,7 +14,7 @@ const ProjectItem = props => (
       
         
           <a className={props.iconWhole} href={props.linker} target="_blank"
-              style={{animationDelay: ".700s"}}
+              rel='noopener noreferrer' style={{animationDelay: ".700s"}}
           >
           <i className={`${props.i} ${props.iconFinito}`}
             style={{animationDelay: '1.2s'}}
@@ -32,7 +32,7 @@ const ProjectItem = props => (
         <div className="cardBack">
           <div className="cardBackPic" style={{background: `url(${props.picture}) no-repeat`}}/>
           <a className={props.iconWhole} href={props.linker} target="_blank"
-              style={{animationDelay: ".700s"}}
+              rel='noopener noreferrer' style={{animationDelay: ".700s"}}
           >
             <div data-tooltip="visit">
             <i className={`${props.i} ${props.iconFinito}`}

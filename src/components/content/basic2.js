@@ -36,12 +36,13 @@ class Basic2 extends Component {
             </p>
           </div>
           <div className="iconHolder-Me">
-            <a href="https://www.freecodecamp.org/alonzathompson" target="_blank"><i className="fa fa-free-code-camp fa-2x" aria-hidden="true"></i></a>
-            <a href="https://stackoverflow.com/users/4421978/alonza-thompson" target="_blank"><i className="fa fa-stack-overflow fa-2x" aria-hidden="true"></i></a>
+            <a href="https://www.freecodecamp.org/alonzathompson" target="_blank" rel='noopener noreferrer'><i className="fa fa-free-code-camp fa-2x" aria-hidden="true"></i></a>
+            <a href="https://stackoverflow.com/users/4421978/alonza-thompson" target="_blank" rel='noopener noreferrer'><i className="fa fa-stack-overflow fa-2x" aria-hidden="true"></i></a>
             <a data-tooltip="resume"
               className="download" 
               href={resume} 
               download
+              rel='noopener noreferrer'
             >
               <i className="fa fa-file-word-o fa-2x" aria-hidden="true" />
             </a>
