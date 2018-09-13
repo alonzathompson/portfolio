@@ -8,7 +8,7 @@ const Basic1 = (props) => {
                 <h2>The Fight</h2>
                 <p>
                     We have begun the beautful journey of being able to turn ideas into tangible solutions. 
-                  The struggle to make since of all the principles that recursively compound on one another can be daunting,
+                  The struggle to make sense of all the principles that recursively compound on one another can be daunting,
                   but we are in it for the long haul. Controlling the machine and creating technology; on all levels, for all levels.
                 </p>
                 

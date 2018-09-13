@@ -11,7 +11,7 @@ class GraphicBlockA extends Component {
 
             <div className="cardText">
               <h2>
-                Redundancy
+                Databases
               </h2>
               <p>
                 Skills with databases include <span className="pHighlights">PostgresSQL</span>,
