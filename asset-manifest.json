@@ -1,6 +1,6 @@
 {
-  "main.css": "static/css/main.439db629.css",
-  "main.css.map": "static/css/main.439db629.css.map",
+  "main.css": "static/css/main.678f7616.css",
+  "main.css.map": "static/css/main.678f7616.css.map",
   "main.js": "static/js/main.e7fc856c.js",
   "main.js.map": "static/js/main.e7fc856c.js.map",
   "static\\media\\atResume.docx": "static/media/atResume.156178f7.docx",
@@ -13,10 +13,10 @@
   "static\\media\\headerText.svg": "static/media/headerText.4b188ffe.svg",
   "static\\media\\headerback2.jpg": "static/media/headerback2.37bbbbae.jpg",
   "static\\media\\picOfMe.png": "static/media/picOfMe.f6945041.png",
-  "static\\media\\portfolioHeader2.png": "static/media/portfolioHeader2.c0d6f289.png",
+  "static\\media\\portfolioHeader2-min.png": "static/media/portfolioHeader2-min.9dc6dc3f.png",
   "static\\media\\projectbackground2.jpg": "static/media/projectbackground2.0d5f3546.jpg",
   "static\\media\\reduxnewportfolioSmall.jpg": "static/media/reduxnewportfolioSmall.5bff704b.jpg",
   "static\\media\\weathernewportfolio.jpg": "static/media/weathernewportfolio.9feb6fe3.jpg",
-  "static\\media\\webDev.png": "static/media/webDev.0212f10a.png",
+  "static\\media\\webDev-min.png": "static/media/webDev-min.0cfd9be6.png",
   "static\\media\\wikinewportfolio.jpg": "static/media/wikinewportfolio.85cdceb2.jpg"
 }
