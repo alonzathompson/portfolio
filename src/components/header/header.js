@@ -1,5 +1,5 @@
 import React from "react";
-import headerBack from '../../assets/headerBack2.jpg';
+import headerBack from '../../assets/headerback2.jpg';
 
 const Header = (props) => {
     return (

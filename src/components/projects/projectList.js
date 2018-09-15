@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
 import ProjectItem from './projectItem.js';
-import weather from '../../assets/weatherNewPortfolio.JPG';
-import calculator from '../../assets/calculator_PortfolioSmall.png';
-import wiki from '../../assets/wikiNewPortfolio.JPG';
-import redux from '../../assets/reduxNewPortfolioSmall.JPG';
+import weather from '../../assets/weathernewportfolio.jpg';
+import calculator from '../../assets/calculator_portfolioSmall.jpg';
+import wiki from '../../assets/wikinewportfolio.jpg';
+import redux from '../../assets/reduxnewportfolioSmall.jpg';
 
 class ProjectList extends Component {
   constructor(props){
