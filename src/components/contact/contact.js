@@ -17,7 +17,7 @@ class Contact extends Component {
 
     handleSubmit(e) {
       e.preventDefault();
-      if(this.state.name === "" || this.state.email === ""){
+      if(this.state.name === "" || this.state.email === "" ||  !/(@{1})/g.test(this.state.email)){
         this.setState({
           formAnim: "animated wobble"
         })
@@ -42,7 +42,8 @@ class Contact extends Component {
               this.setState({
                 formAnim: "animated fadeOutLeft",
                 showMessage: "block",
-                showMessageAnim: "animated fadeInRight delay-2s"
+                showMessageAnim: "animated fadeInRight delay-2s",
+                email: "",
               })
             }
           })
@@ -78,7 +79,7 @@ class Contact extends Component {
               className="formInput" 
               type="email" 
               name="email" 
-              value={this.state.value} 
+              value={this.state.email} 
               onChange={this.handleChange.bind(this)} 
               required
             />
@@ -107,9 +108,9 @@ class Contact extends Component {
                  animationDelay: "1s"
                  }}
           >
-            <p>
+            <h2>
               I will get back to you
-            </p>
+            </h2>
           </div>
         </form>
         </div>
