@@ -1112,11 +1112,12 @@ nav div {
 
 .thankYou {
   position: fixed;
-  bottom: 2%;
+  bottom: 20%;
   left: 50%;
   width: 200px;
   height: 100px;
   font-weight: 700;
+  color: #f3f3f3;
 }
 
 .thankYou p{
@@ -1234,6 +1235,10 @@ text-shadow: 0px 0px 50px rgba(140,0,0,0.5);
     text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
     cursor: pointer;
   }
+
+  .thankYou {
+    left: 17.5%;
+  }
 }
 
 @media screen and (min-width: 400px){
@@ -1295,6 +1300,10 @@ text-shadow: 0px 0px 50px rgba(140,0,0,0.5);
     text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
     cursor: pointer;
   }
+
+  .thankYou {
+    left: 20%;
+  }
   
 }
 
@@ -1337,6 +1346,10 @@ text-shadow: 0px 0px 50px rgba(140,0,0,0.5);
     bottom: 20%;
     text-shadow: 2px 2px 15px rgba(0,0,0,0.5);
     cursor: pointer;
+  }
+
+  .thankYou {
+    left: 35%;
   }
 }
 
@@ -1429,11 +1442,19 @@ text-shadow: 0px 0px 50px rgba(140,0,0,0.5);
     max-height: 500px;
   }
 
+  .thankYou {
+    left: 39%;
+  }
+
 }
 
 @media screen and (min-width: 1200px) {
   .clouds{
       right: -18%;
+  }
+
+  .thankYou {
+    left: 42%;
   }
 }
 
