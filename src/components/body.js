@@ -9,12 +9,12 @@ import Footer from './footer/footer.js';
 
 const Body = (props) => {
     return (
-      <main className="myBody">
+      <main className="myBody" style={{transform: props.switchB1State, display: props.showB1State}}>
         <Header />
         <Basic1 />
         <GraphicBlockA />
         <Basic2 />
-        <ProjectList toPjList={props.proj}/>
+        <ProjectList toPjList={props.proj} />
         <GraphicBlockB />
         <Footer />
       </main>

@@ -23,7 +23,15 @@ const ProjectItem = props => (
           <p>{props.itemText}</p>
           <div className="cardFlip">
           <div onClick={() => props.flipToBack()}>
-            <span style={{fontFamily: "Sofia", marginRight: "12px"}} >see more</span>
+            <span style={{fontFamily: "Sofia", 
+            marginRight: "12px", 
+            backfaceVisibility: "hidden",
+            width: "300px",
+            position: "absolute",
+            transform: "translateX(-70px)"
+          }} >
+          see more
+          </span>
             <i className="fa fa-long-arrow-right" />
           </div>
           </div>
@@ -44,12 +52,25 @@ const ProjectItem = props => (
           <p className="description">{props.describe}</p>
           <div className="cardFlip">
             <div onClick={() => props.flipToFront()}>
-              <span style={{fontFamily: "Sofia", marginRight: "12px"}} >flip back</span>
+              <span style={{fontFamily: "Sofia",
+               marginRight: "12px"
+               }} >
+               flip back
+               </span>
               <i className="fa fa-long-arrow-right" />
             </div>
           </div>
+          <div className="card-more-info"
+            onClick={() => {
+              props.openProj();
+              window.scrollTo({
+                top: document.querySelector(".project-list").offsetTop - 80,
+                behavior: "smooth"
+              });
+            }}>
+            more info
+          </div>
         </div>
-
       </div>
     </div> 
   </div>

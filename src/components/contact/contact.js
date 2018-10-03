@@ -61,7 +61,7 @@ class Contact extends Component {
       return (
         <div>
         <form className="formHolder">
-          <div className="name">
+          <div className="name formDivs">
             <label htmlFor="name">Name:</label>
             <input 
               className="formInput" 
@@ -73,7 +73,7 @@ class Contact extends Component {
             />
           </div>
           
-          <div className="email">
+          <div className="email formDivs">
             <label htmlFor="email">Email:</label>
             <input 
               className="formInput" 
@@ -85,7 +85,7 @@ class Contact extends Component {
             />
           </div>
 
-          <div className="message">
+          <div className="message formDivs">
             <label htmlFor="message">Message:</label>
             <textarea 
               className="formTextArea" 
@@ -108,7 +108,7 @@ class Contact extends Component {
                  animationDelay: "1s"
                  }}
           >
-            <h2>
+          <h2>
               I will get back to you
             </h2>
           </div>
