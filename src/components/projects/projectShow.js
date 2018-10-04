@@ -5,7 +5,7 @@ import React from 'react';
     <div className="caseStudyHolders">
       <div className={`caseStudy ${props.projectViewTrans}`} style={{ display: props.projectState }}>
           <div className="bigCard">
-            <h2 className="closeProject" 
+            <i className="closeProject fa fa-close fa-2x" 
                 onClick={() => {
                   props.closeProject();
                   window.scrollTo({
@@ -13,7 +13,11 @@ import React from 'react';
                     behavior: "smooth"
                   });
                 }}
-            >X</h2>
+
+                style={{
+                  fontWeight: "800 !important"
+                }}
+            />
 
             <div className="project-header">
               <div className="project-image"
