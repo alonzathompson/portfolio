@@ -77,7 +77,7 @@ class App extends Component {
 
     window.addEventListener("wheel", (e) => {
       if(e.deltaY > 0 ){
-        if(window.scrollY > 300){
+        if(window.scrollY > window.innerHeight){
         this.setState({
           navShow: "none"
         })
