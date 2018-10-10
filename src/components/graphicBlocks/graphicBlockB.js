@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import me from '../../assets/picOfMe.png';
+import './graphicBlocks.css';
 
 class GraphicBlockB extends Component{
     constructor(props){

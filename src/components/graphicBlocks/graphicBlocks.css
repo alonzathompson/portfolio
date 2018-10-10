@@ -1,0 +1,231 @@
+.block {
+    height: 100%;
+    width: 100%;
+    /*background: rgba(200,0,0,.3);*/
+  }
+  
+  .block2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    height: auto;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+    margin-top: 98px;
+  }
+  
+  .blockDiv {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    margin-bottom: 32px;
+  }
+  
+  .blockDiv:before {
+    content:"";
+    position: absolute;
+    height: 5px;
+    width: 60px;
+    vertical-align: middle;
+    background: rgb(175, 212, 252);
+    top: 50%;
+    left: -webkit-Calc(-50% + 20px);
+    left: -moz-Calc(-50% + 20px);
+    left: -o-Calc(-50% + 20px);
+    left: Calc(-50% + 20px);
+  }
+  
+  .blockDiv:after {
+    content:"";
+    position: absolute;
+    height: 5px;
+    width: 60px;
+    vertical-align: middle;
+    background: rgb(175, 212, 252);
+    top: 50%;
+    right: Calc(-50% + 20px);
+  }
+  
+  .block2 h2{
+    font-weight: 600;
+    font-size: 3em;
+    text-align: center;
+  }
+
+  /*graphBlock A*/
+
+  .graph-block-a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin: auto;
+  }
+  
+  .cardContainer {
+    width: 100%;
+    min-height: 150px;
+    margin: 32px 2.5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-shadow: 0px 0px 50px -20px rgba(0,0,0,0.5);
+            box-shadow: 0px 0px 50px -20px rgba(0,0,0,0.5);
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 9px 9px 0 0;
+  }
+  
+  .cardBackground {
+    margin-bottom: 18px;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(250, 234, 17, 0.700)), to(rgba(247, 198, 40, 0.931)));
+    background: -webkit-linear-gradient(rgba(250, 234, 17, 0.700), rgba(247, 198, 40, 0.931));
+    background: -o-linear-gradient(rgba(250, 234, 17, 0.700), rgba(247, 198, 40, 0.931));
+    background: linear-gradient(rgba(250, 234, 17, 0.700), rgba(247, 198, 40, 0.931));
+    width: 100%;
+    height: 200px;
+    padding-left: 40%;
+    padding-right: 40%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    border-radius: 9px 9px 0 0;
+  }
+  
+  .cardText {
+    padding: 12px;
+  }
+  
+  .graph-block-a p {
+    color: #999;
+    text-align: center;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+  
+  .graph-block-a h2 {
+    color: #333;
+    text-align: center;
+    font-weight: 100;
+  }
+  
+  .graph-block-a i {
+    font-size: 5vw;
+    color: #fff;
+  }
+
+  /*Media Queries*/
+  @media screen and (min-width: 320px){
+    .graph-block-a {
+      width: 90%;
+    }
+  
+    .graph-block-a .cardContainer {
+      margin: 32px auto;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+    }
+  
+    .graph-block-a p{
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 400px){
+    .graph-block-a {
+      width: 90%;
+    }
+    
+    .graph-block-a p{
+      font-size: 1.5rem;
+    }
+  }
+
+  @media screen and (max-width: 699px) {
+    .graph-block-a {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+    }
+  
+    .graph-block-a i {
+      font-size: 4rem;
+    }
+  }
+  
+  @media screen and (min-width: 700px) {
+    .graph-block-a .cardContainer {
+      margin: 32px 1.5%;
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start;
+    }
+  }
+
+  @media screen and (min-width: 1024px){
+    .graph-block-a{
+      width: 80%;
+    }
+  
+    .graph-block-a .cardContainer {
+      margin: 32px 1.5%;
+    }
+    
+    .graph-block-a p{
+      font-size: 2rem;
+    }
+
+    .diagramHolder {
+      width: 100%;
+      height: 500px;
+    }
+  }
+
+  @media screen and (min-height: 900px) {
+    .graph-block-a {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+    }
+    
+  }
+  
+  .test{
+    display: none;
+  }

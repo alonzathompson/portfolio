@@ -1,4 +1,5 @@
 import React,{Component} from 'react';
+import './graphicBlocks.css';
 
 class GraphicBlockA extends Component {
     render(){

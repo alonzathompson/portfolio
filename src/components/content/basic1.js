@@ -1,8 +1,9 @@
 import React from 'react';
+import './content.css';
 
 const Basic1 = (props) => {
     return (
-        <section className="basic" >
+        <section className="basic">
             <div>
                 <h1>Us <span style={{background: "#007bff", textShadow: "3px 10px 10px rgba(0,0,0,.9)", color: "#f0f0f0" }}>></span></h1>
                 <h2>The Fight</h2>

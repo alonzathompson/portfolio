@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
-import resume from '../../assets/atResume.docx'
+import resume from '../../assets/atResume.docx';
+import './content.css';
 
 class Basic2 extends Component {
     constructor(props){
       super(props)
       this.state = {
         showing: "",
-        isShowing: ""
+        isShowing: "",
+        chevronFade: ""
       }
     }
 
@@ -15,7 +17,8 @@ class Basic2 extends Component {
         if(window.scrollY >= this.blockTop.offsetTop - 300){
           this.setState({
             showing: "block",
-            isShowing: "animated fadeIn"
+            isShowing: "animated fadeIn",
+            chevronFade: "animated fadeInLeft"
           })
         }
       })
@@ -24,7 +27,13 @@ class Basic2 extends Component {
       return (
         <section className="basic" ref={top => this.blockTop = top}>
           <div className={`test ${this.state.isShowing}`} style={{ display: this.state.showing}}>
-            <h1>Me <span style={{background: "#007bff", textShadow: "3px 10px 10px rgba(0,0,0,.9)", color: "#f0f0f0"  }}>></span></h1>
+            <h1>Me <span className={this.state.chevronFade} 
+              style={{background: "#007bff", 
+                textShadow: "3px 10px 10px rgba(0,0,0,.9)", 
+                color: "#f0f0f0"  
+              }}>>
+              </span>
+            </h1>
             <h2>What can I say</h2>
             <p>
               A studious learner of all things web, I'm addicted to getting better at code and 

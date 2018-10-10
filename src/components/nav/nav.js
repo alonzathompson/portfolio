@@ -1,12 +1,13 @@
 import React from 'react';
 import logo from '../../assets/Artraun.svg';
+import './nav.css';
 
 const Nav = (props) => {
     return (
       <div>
       <div className={`nav-holder ${props.nBg}`} style={{display: props.showNav}}>
         <nav>
-          <div className="nav-button" >
+          <div className="nav-button">
             <span className={`nav-logo ${props.logoScale}`} onClick={() => {
                 props.mobileClose();
                 window.scrollTo({
@@ -14,7 +15,7 @@ const Nav = (props) => {
                   behavior: "smooth"
                 });
               }}>
-              <img className="limg" src={logo} alt="artraun" height="32px" width="100%"/>
+              <img className="limg" src={logo} alt="artraun" height="32px" width="80%"/>
             </span>
           <section style={{display: "inline-flex"}}> 
             <div className={props.navState}
@@ -32,7 +33,7 @@ const Nav = (props) => {
             style={{color: props.nClr}}>
              <p onClick={() => {
                 window.scrollTo({
-                  top: document.querySelector(".project-list").offsetTop,
+                  top: document.querySelector(".project-list").offsetTop - 50,
                   behavior: "smooth"
                 })
              }}>
@@ -69,7 +70,7 @@ const Nav = (props) => {
             <span className="mobile-nav-button" 
               onClick={props.mobileHandle}
               style={{marginTop: props.mobileBtnS, transform: props.rot, transition: `.2s all ease-in`}}>
-              <i className={`fa fa-bars fa-3x nav-mobile`} aria-hidden="true" style={{color: props.mobileBtnNavColor}}></i>
+              <i className={`fa fa-bars fa-3x nav-mobile ${props.mobileBtnCl}`} aria-hidden="true" style={{color: props.mobileBtnNavColor}}></i>
             </span>
          </div> 
         </nav>
@@ -95,7 +96,7 @@ const Nav = (props) => {
              <p onClick={() => {
                props.mobileClose();
                 window.scrollTo({
-                  top: document.querySelector(".project-list").offsetTop,
+                  top: document.querySelector(".project-list").offsetTop - 50,
                   behavior: "smooth"
                 })
               }}>

@@ -1,11 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import HeaderB from './header/header2.js';
-import Basic1 from './content/basic1.js';
-import Basic2 from './content/basic2.js';
-import GraphicBlockA from './graphicBlocks/graphicBlockA.js';
-import GraphicBlockB from './graphicBlocks/graphicBlockB.js';
-import ProjectList from './projects/projectList.js';
-import Footer from './footer/footer.js';
+//import Footer from './footer/footer.js';
 
 const BodyB = (props) => {
     return (

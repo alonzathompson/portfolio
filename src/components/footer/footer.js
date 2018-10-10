@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Contact from '../contact/contact.js';
+import './footer.css';
 
 class Footer extends Component {
     constructor(props){
@@ -54,7 +55,7 @@ class Footer extends Component {
           }}>
           <div>
             <h2 style={{ color: "white", textAlign: "center"}}>
-              If You were wondering: <h4 style={{display: "inline-block"}}>React js, Node js, Animate.css, Custom Css</h4>
+              If You were wondering: <span style={{display: "inline-block"}}>React js, Node js, Animate.css, Custom Css</span>
             </h2>
             <h5 style={{ color: "white", textAlign: "center", marginBottom: "32px"}}>
               &copy;copyright Alonza Thompson for Artraun

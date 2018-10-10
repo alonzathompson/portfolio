@@ -1,0 +1,169 @@
+/**Where text is**/
+.basic {
+    font-weight: 300;
+    width: 100%;
+   /* min-height: 60vh;*/
+    
+    padding-bottom: 32px;
+    margin: 32px 0px;
+  }
+
+  .basic h1 {
+    font-size: 5vw;
+    padding: 12px 0px;
+  }
+  
+  .basic p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    text-align: justify;
+  }
+  
+  .download {
+    position: relative;
+  }
+  
+  [data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  /* Hide the tooltip content by default */
+  [data-tooltip]:before,
+  [data-tooltip]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  /* Position tooltip above the element */
+  [data-tooltip]:before {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 100px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  
+  /* Triangle hack to make tooltip look like a speech bubble */
+  [data-tooltip]:after {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+  }
+  
+  /* Show tooltip content on hover */
+  [data-tooltip]:hover:before,
+  [data-tooltip]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+  }
+
+  /**IconHolder inside Basic class**/
+.iconHolder-Me {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  
+  .iconHolder-Me a {
+    margin-right: 32px;
+  }
+  
+  /*Media Queries*/
+  @media screen and (min-width: 320px){
+
+    .basic {
+      margin: 0 auto;
+      width: 90%;
+    }
+  
+    .basic h1{
+        font-size: 3rem;
+    }
+  
+    .basic h2{
+        font-size: 10vw;
+      }
+    
+    .basic p{
+      font-size: 1.5rem;
+    }
+  }
+  
+  @media screen and (min-width: 400px){
+    .basic {
+      margin: 0 auto;
+      width: 80%;
+    }
+  
+    .basic h1{
+        font-size: 3rem;
+    }
+  
+    .basic h2{
+        font-size: 8vw;
+      }
+    
+    .basic p{
+      font-size: 1.5rem;
+    }
+
+  }
+
+  @media screen and (min-width: 1024px){
+    .basic {
+      width: 70%;
+      margin: 0 auto;
+      margin-top: 32px;
+    }
+  
+    .basic h1{
+      font-size: 5vw;
+    }
+  
+    .basic h2{
+      font-size: 6vw;
+    }
+    
+    .basic p{
+      font-size: 2rem;
+    }
+    .diagramHolder {
+      width: 100%;
+      height: 500px;
+    }
+  }
+
+  .test{
+    display: none;
+  }
+
+  

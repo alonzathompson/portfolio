@@ -9,6 +9,7 @@
     "font-awesome": "^4.7.0",
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-lazy-load": "^3.0.13",
     "react-scripts": "1.1.4",
     "smoothscroll-polyfill": "^0.4.3"
   },

@@ -1,4 +1,5 @@
 import React from 'react';
+import './projects.css';
 
 const ProjectItem = props => (
   <div className={`projectCard ${props.cssAnim}`}>

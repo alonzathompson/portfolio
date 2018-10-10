@@ -1,5 +1,6 @@
 import React from "react";
 import page404 from '../../assets/page404.svg';
+import './header.css';
 
 const HeaderB = (props) => {
     return (

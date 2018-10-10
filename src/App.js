@@ -20,6 +20,7 @@ class App extends Component {
         {name: "projectC"}
       ],
       navShow: "block",
+      navSecShow: "none",
       middleA: "",
       clouds: "cloudAnim 20s linear infinite",
       fadeWords: "",
@@ -29,6 +30,7 @@ class App extends Component {
       logoS: "lgScale",
       mobileNav: "none",
       mobileButtonNavColor: "white",
+      mobileBtnClass:"",
       mobileBtnSpacing: "18px",
       switch: "absolute",
       body1Show: "block",
@@ -56,35 +58,22 @@ class App extends Component {
           navColor: "#0775B2",
           navHover: "nav-tab2",
           mobileButtonNavColor: "#0775B2",
+          mobileBtnClass:"mobile-nav-color",
           logoS: "",
-          mobileBtnSpacing: "0"
+          mobileBtnSpacing: "0",
+          navSecShow: "block"
         })
         
       } else {
         this.setState({
           navBackground: "",
+          navSecShow: "none",
           navColor: "white",
           navHover: "nav-tab",
           mobileButtonNavColor: "white",
+          mobileBtnClass:"",
           logoS: "lgScale",
           mobileBtnSpacing: "18px"
-        })
-      }
-    },{
-      capture: true,
-      passive: true
-    })
-
-    window.addEventListener("wheel", (e) => {
-      if(e.deltaY > 0 ){
-        if(window.scrollY > window.innerHeight){
-        this.setState({
-          navShow: "none"
-        })
-      }
-      } else {
-        this.setState({
-          navShow: "block"
         })
       }
     },{
@@ -107,7 +96,6 @@ class App extends Component {
   }
 
   handleMobileNav() {
-
     if(this.state.mobileNav !== "flex"){
       this.setState({
         mobileNav: "flex",
@@ -116,11 +104,19 @@ class App extends Component {
       })
       this.cancelProjectShow();
     } else {
-      this.setState({
-        mobileNav: "none",
-        mobileButtonNavColor: "white",
-        rotation: `rotate(0deg)`
-      })
+      if(window.scrollY > window.innerHeight - 200) {
+        this.setState({
+          mobileNav: "none",
+          mobileButtonNavColor: "#0775B2",
+          rotation: `rotate(0deg)`
+        })
+      } else {
+        this.setState({
+          mobileNav: "none",
+          mobileButtonNavColor: "white",
+          rotation: `rotate(0deg)`
+        })
+      }
     }
   }
 
@@ -204,6 +200,8 @@ class App extends Component {
           mobileClose = {this.closeMobileNav}
           mobileBtnNavColor = {this.state.mobileButtonNavColor}
           mobileBtnS = {this.state.mobileBtnSpacing}
+          mobileBtnCl = {this.state.mobileBtnClass}
+          navSec = {this.state.navSecShow}
           rot = {this.state.rotation}
 
           blogSwitch = {this.handleBlog}

@@ -5,13 +5,11 @@ class Header extends Component{
     constructor(props){
         super(props)
         this.state = {
-            text: `Let's Empower The World`,
-            textAnim: ``
+            textDisplay: "block"
         }
     }
 
-    componentWillMount(){
-        
+    componentWillMount(){ 
         window.addEventListener("scroll", () => {
             if(window.scrollY > window.innerHeight){
                 if(this.vid !== null){
@@ -23,14 +21,14 @@ class Header extends Component{
                 }
             }
 
-            if(window.scrollY > window.innerHeight - 300){
+            if(window.scrollY > window.innerHeight - 600){
                 this.setState({
-                    textAnim:`animated fadeOut`
+                    textDisplay:`none`
                 })
             } else {
                 this.setState({
-                    textAnim:`animated fadeIn`
-                })
+                    textDisplay:`block`
+                })    
             }
         })
     }
@@ -39,7 +37,7 @@ class Header extends Component{
         return (
             <section className="header vcontainer">
                 <div className="vidContainer">
-                <video autoPlay="true" 
+                {<video autoPlay={true}
                     loop="loop" 
                     muted="muted" 
                     preload="auto"
@@ -47,15 +45,15 @@ class Header extends Component{
                 >
                     <source src={bg} type="video/mp4" />
                     Your browser does not support the video tag.
-                </video>
+                </video>}
                 <div className="voverlay"></div>
                 </div>
-                {/*<div className="header-border-text">
-                    <h1 className={`${this.state.textAnim}`}
-                        style={{fontWeight: "700", fontStyle:"impact", fontSize: "3vw"}}>
-                        {this.state.text}
+                <div className={`header-border-text`} style={{ display: this.state.textDisplay}}>
+                    <h1>
+                        Let's Empower the World!
                     </h1>
-                </div>*/}
+                    <p>Together we can achieve anything.</p>
+                </div>
             </section>
         )
     }

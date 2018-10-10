@@ -2,9 +2,13 @@ import React, {Component} from 'react';
 import ProjectItem from './projectItem.js';
 import weather from '../../assets/weathernewportfolio.jpg';
 import calculator from '../../assets/calculator_portfolioSmall.jpg';
-import wiki from '../../assets/wikinewportfolio.jpg';
+import songTracker from '../../assets/vuesongtracker.jpeg';
 import redux from '../../assets/reduxnewportfolioSmall.jpg';
+import acr from '../../assets/RfidEmployee.jpg';
+import phone from '../../assets/phoneCss.jpg';
 import ShowProject from './projectShow.js';
+import './projects.css';
+
 
 class ProjectList extends Component {
   constructor(props){
@@ -60,18 +64,18 @@ class ProjectList extends Component {
         },
         {
           showing: `three`,
-          link: "https://alonzathompson.github.io/WikiSearch/",
-          icon: `fa fa-search fa-4x aria-hidden="true"`,
-          text: "Wiki",
-          pic: wiki,
-          alt: "wiki search application",
-          tech: "HTML, CSS, Vanilla JS",
-          description: "A Wiki search app built with HTML, Custom Css, Vanilla Js",
-          caseStudy: `This project I belive was around the time I started using the fetch
-          method. This shortened the regular jargon for making api request.The purpose of this
-          project was to practice my layout capabilites always staying concious of responsive web.
-          Learned about api structure digging into how Wiki lays out it's endpoints. I found
-          their documentation to be straight-forward which rarely happens with software.`
+          link: "https://alonzathompson.github.io/vuesongtracker/",
+          icon: `fa fa-music fa-4x aria-hidden="true"`,
+          text: "Vue Songtracker",
+          pic: songTracker,
+          alt: "Song tracking application",
+          tech: "HTML, CSS, Vue js, PostgreSQL",
+          description: "A Song tracking app built with HTML, Custom Css, Vue Js, PostGreSQL",
+          caseStudy: `This project Exposed me to the Vue js ecosytem and using PostGreSQL.
+          Through this I trully learned about orm's, and on a lower level what 
+          databases trully are. I really like the simplicity of Vue Js and this
+          project added to my understanding of component based architecture. The app
+          has a user login and register and stores tabs, lyrics, video and picture.`
         },
         {
           showing: `four`,
@@ -88,9 +92,38 @@ class ProjectList extends Component {
           I started this porject on code pen, and since have added the stripe and 
           google maps to see location of order. This project also has filtering , price calculations,
           and other basic neccessities when it comes to building applications like these.`
+        },
+        {
+          showing: `five`,
+          link: "https://github.com/alonzathompson/acr",
+          icon: `fa fa-id-badge fa-4x aria-hidden="true"`,
+          text: "Employee Tracker",
+          pic: acr,
+          alt: "RFID application",
+          tech: "Node JS, Mongoose, SmartCard Js, CSS, WebSockets",
+          description: "Employee system sing SmartCard Js, WebSockets, Plivo, Mongoose",
+          caseStudy: `This gave me a chance to see the full-stack all the way down to the
+          zeroes and ones. I had to install an assemly code editor, interpret the reader/writer 
+          data in zero's and one's/ hex, and then bring it all together in node js. For 
+          styling I went with materialize.js, and the goal was to establish a 
+          mobile hub for execs to interact with the company through RFID.`
+        },
+        {
+          showing: `six`,
+          link: "https://codepen.io/ar-traunworks/full/YebQgV/",
+          icon: `fa fa-film fa-4x aria-hidden="true"`,
+          text: "Pure css animation",
+          pic: phone,
+          alt: "Css Animation",
+          tech: "HTML, CSS, Vanilla Js",
+          description: "Css animation of phone building similation",
+          caseStudy: `This was an oppurtunity to sharpen my css skills. This 
+          phone similation is comprised of different images representing parts
+          of the phone. The parts are placed in the default positions where 
+          the basic parts that make-up a smartphone would go.`
         }
       ]
-    },
+    }
 
     this.handleAfter = this.handleAfter.bind(this);
     this.handleBefore = this.handleBefore.bind(this);
@@ -116,6 +149,11 @@ class ProjectList extends Component {
   }
 
   handleBefore() {
+    if(this.state.counter < 0 ){
+      this.setState({
+        counter: this.state.pList.length - 1
+      })
+    }
       this.setState({
         counter: this.state.counter - 1,
         animCss: "animated bounceInRight",
@@ -144,7 +182,7 @@ class ProjectList extends Component {
   }
 
   handleAfter() {
-    if(this.state.counter >= this.state.pList.length - 1){
+    if(this.state.counter > this.state.pList.length - 2){
       this.setState({
         counter: 0
       });
