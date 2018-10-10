@@ -1,9 +1,10 @@
 {
-  "main.css": "static/css/main.6ebf01be.css",
-  "main.css.map": "static/css/main.6ebf01be.css.map",
-  "main.js": "static/js/main.392d058a.js",
-  "main.js.map": "static/js/main.392d058a.js.map",
+  "main.css": "static/css/main.f9c106cd.css",
+  "main.css.map": "static/css/main.f9c106cd.css.map",
+  "main.js": "static/js/main.7dd26956.js",
+  "main.js.map": "static/js/main.7dd26956.js.map",
   "static\\media\\Artraun.svg": "static/media/Artraun.f3dccc1f.svg",
+  "static\\media\\RfidEmployee.jpg": "static/media/RfidEmployee.86ce4525.jpg",
   "static\\media\\atResume.docx": "static/media/atResume.156178f7.docx",
   "static\\media\\cafe.vid": "static/media/cafe.bd5663b3.vid",
   "static\\media\\fontawesome-webfont.eot": "static/media/fontawesome-webfont.674f50d2.eot",
@@ -12,13 +13,12 @@
   "static\\media\\fontawesome-webfont.woff2?v=4.7.0": "static/media/fontawesome-webfont.af7ae505.woff2",
   "static\\media\\fontawesome-webfont.woff?v=4.7.0": "static/media/fontawesome-webfont.fee66e71.woff",
   "static\\media\\footerB2.JPG": "static/media/footerB2.29860c60.JPG",
-  "static\\media\\headerText.svg": "static/media/headerText.4b188ffe.svg",
   "static\\media\\page404.svg": "static/media/page404.0ea4186f.svg",
+  "static\\media\\phoneCss.jpg": "static/media/phoneCss.9984226b.jpg",
   "static\\media\\picOfMe.png": "static/media/picOfMe.f6945041.png",
-  "static\\media\\portfolioHeader2-min.png": "static/media/portfolioHeader2-min.9dc6dc3f.png",
   "static\\media\\projectbackground2.jpg": "static/media/projectbackground2.0d5f3546.jpg",
   "static\\media\\reduxnewportfolioSmall.jpg": "static/media/reduxnewportfolioSmall.5bff704b.jpg",
+  "static\\media\\vuesongtracker.jpeg": "static/media/vuesongtracker.2693b4e3.jpeg",
   "static\\media\\weathernewportfolio.jpg": "static/media/weathernewportfolio.9feb6fe3.jpg",
-  "static\\media\\webDev-min.png": "static/media/webDev-min.0cfd9be6.png",
-  "static\\media\\wikinewportfolio.jpg": "static/media/wikinewportfolio.85cdceb2.jpg"
+  "static\\media\\webDev-min.png": "static/media/webDev-min.0cfd9be6.png"
 }
