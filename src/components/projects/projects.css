@@ -8,6 +8,7 @@
     background-position: center;
     position: relative;
     padding-bottom: 96px;
+    overflow: hidden;
   }
   
   .p-list-header {
@@ -533,7 +534,7 @@
     }
   
     .projectCard {
-      width: 80vvw;
+      width: 80vw;
       width: 70vw;
       max-width: 300px;
       height: 70vh;

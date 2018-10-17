@@ -57,8 +57,7 @@ class ProjectList extends Component {
           implementing basic functionality of a device. Applying a virtual layout to an old
           favorite, the calculator.
           Looking back this was more about aesthetics and look as oppose to the functionality.
-          I did hit a snag when it came to the decimals and the crazy thing was, Free Code Camp
-          had updated there course curriculum with a good intro to RegEx expressions. This allowed
+          I did hit a snag which forced me to learn RegEx expressions. This allowed
           me to regulate the decimal placement and life went on.`
 
         },
@@ -90,8 +89,7 @@ class ProjectList extends Component {
           Building this project gave me experience with redux and how to set up my store. What was
           really great about this project was establishing immutable concepts.
           I started this porject on code pen, and since have added the stripe and 
-          google maps to see location of order. This project also has filtering , price calculations,
-          and other basic neccessities when it comes to building applications like these.`
+          google maps to see location of order. This project also has filtering and price calculations.`
         },
         {
           showing: `five`,
@@ -107,7 +105,7 @@ class ProjectList extends Component {
           data in zero's and one's/ hex, and then bring it all together in node js. For 
           styling I went with materialize.js, and the goal was to establish a 
           mobile hub for execs to interact with the company through RFID.`
-        },
+        }/*,
         {
           showing: `six`,
           link: "https://codepen.io/ar-traunworks/full/YebQgV/",
@@ -121,7 +119,7 @@ class ProjectList extends Component {
           phone similation is comprised of different images representing parts
           of the phone. The parts are placed in the default positions where 
           the basic parts that make-up a smartphone would go.`
-        }
+        }*/
       ]
     }
 
@@ -139,7 +137,7 @@ class ProjectList extends Component {
       if(window.scrollY <= this.projectHolder.offsetTop - 400 || window.scrollY >= document.querySelector(".block2").offsetTop - 200){
         this.closeCurrentProject();
       }
-      if(window.scrollY >= this.projectHolder.offsetTop - 100){
+      if(window.scrollY >= this.projectHolder.offsetTop - 150){
         this.setState({
           projAnim: "animated bounceInRight",
           isShowing: 1

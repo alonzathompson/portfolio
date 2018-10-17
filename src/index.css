@@ -228,7 +228,6 @@ h2 {
   right: 0;
   z-index: 20;
   font-size: 16px;
-  font-family: Roboto;
   -webkit-transition: -webkit-transform 1s ease-in-out;
   transition: -webkit-transform 1s ease-in-out;
   -o-transition: transform 1s ease-in-out;

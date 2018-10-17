@@ -21,7 +21,7 @@ class Header extends Component{
                 }
             }
 
-            if(window.scrollY > window.innerHeight - 600){
+            if(window.scrollY > window.innerHeight - 500){
                 this.setState({
                     textDisplay:`none`
                 })
@@ -53,6 +53,15 @@ class Header extends Component{
                         Let's Empower the World!
                     </h1>
                     <p>Together we can achieve anything.</p>
+                </div>
+                <div className="header-chev" style={{ display: this.state.textDisplay}}
+                onClick={() => {
+                    window.scrollTo({
+                        top: document.querySelector(".basic").offsetTop - 100,
+                        behavior: "smooth"
+                      })
+                }}>
+                    <i className="fa fa-chevron-down fa-3x" />
                 </div>
             </section>
         )

@@ -116,7 +116,34 @@
         transform: rotateZ(-90deg);
   }
 
+  .header-chev {
+    position: absolute;
+    top: 70vh;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    margin: 0 auto;
+    animation: chevAnim 1s ease-in infinite;
+    cursor: pointer;
+  }
+
+  @keyframes chevAnim {
+    0% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+  }
+
   /*Media Queries*/
+  @media screen and (min-width: 1024px){
+    .header-chev{
+      top: 80vh;
+    }
+  }
+
   @media screen and (min-width: 320px){
     .titleText{
       right: -30px;

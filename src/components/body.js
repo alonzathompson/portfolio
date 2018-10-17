@@ -14,7 +14,7 @@ const Body = (props) => {
         <LazyLoad offsetTop={0} throttle={150}>
           <Header />
         </LazyLoad>
-        <LazyLoad height={397} offsetTop={300} throttle={150}>
+        <LazyLoad offsetTop={300} throttle={150}>
           <Basic1 />
         </LazyLoad>
         <LazyLoad offsetTop={600} throttle={150}>
@@ -23,8 +23,8 @@ const Body = (props) => {
         <LazyLoad offsetTop={1200} throttle={150}>
           <Basic2 />
         </LazyLoad>
-        <LazyLoad offsetTop={1600} throttle={150}>
-          <ProjectList toPjList={props.proj} />
+        <LazyLoad offsetTop={1000} thottle={150}>
+          <ProjectList />
         </LazyLoad>
         <LazyLoad offsetTop={2000} throttle={150}>
           <GraphicBlockB />
