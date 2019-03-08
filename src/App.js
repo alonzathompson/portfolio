@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import Nav from './components/nav/nav.js';
 import Body from './components/body.js';
 import BodyB from './components/body2.js';
 import './App.css';
 import smoothscroll from 'smoothscroll-polyfill';
+import { BrowserRouter } from 'react-router-dom';
 
 smoothscroll.polyfill();
 
@@ -29,6 +31,7 @@ class App extends Component {
       navHover: "nav-tab",
       logoS: "lgScale",
       mobileNav: "none",
+      mobileNavClick: 1,
       mobileButtonNavColor: "white",
       mobileBtnClass:"",
       mobileBtnSpacing: "18px",
@@ -44,6 +47,7 @@ class App extends Component {
     this.handleMobileNav = this.handleMobileNav.bind(this);
     this.handleNav = this.handleNav.bind(this);
     this.closeMobileNav = this.closeMobileNav.bind(this);
+    this.closeMobileOnClick = this.closeMobileOnClick.bind(this);
     this.handleBlog = this.handleBlog.bind(this);
     this.blogShow = this.blogShow.bind(this);
     this.mainShow = this.mainShow.bind(this);
@@ -52,6 +56,7 @@ class App extends Component {
   
   componentDidMount() {
     window.addEventListener("scroll", (e) => {
+      this.closeMobileNav()
       if(window.scrollY > window.innerHeight - 200) {
         this.setState({
           navBackground: "nav-switch",
@@ -79,7 +84,15 @@ class App extends Component {
     },{
       capture: true,
       passive: true
-    })
+    });
+
+    window.addEventListener("click", (e) => {
+        if(this.state.mobileNavClick % 2 === 0){
+         this.closeMobileNav();
+        }
+
+        console.log("mobile nav click ", this.state.mobileNavClick)
+    });
   }
 
   //handle Nav 
@@ -127,13 +140,32 @@ class App extends Component {
     })
   }
 
+  closeMobileOnClick() {
+    if(this.state.mobileNav === "flex"){
+      this.closeMobileNav();
+    }
+    ReactGA.event({
+      category: 'closed from mobile',
+      action: 'Clicked Link',
+    });
+  }
+
   closeProjectShow() {
     this.setState({
       closeProject: true
     })
+    ReactGA.event({
+      category: 'closed project',
+      action: 'Clicked Link',
+    });
   }
 
   blogShow() {
+    ReactGA.event({
+      category: 'blog',
+      action: 'Clicked Link',
+    });
+    
     this.setState({
       body1: "translateX(-800vh)",
       body2Show: "block",
@@ -145,7 +177,6 @@ class App extends Component {
           body1Show: "none",
           body2: "translateX(0)"
         })
-        window.location.hash = "blog";
       }, 1000)
   }
 
@@ -168,8 +199,16 @@ class App extends Component {
   handleBlog() {
     if(this.state.body2Show !== "block"){
       this.blogShow();
+      ReactGA.event({
+        category: 'Opened blog',
+        action: 'Clicked Link',
+      });
     } else if(this.state.body2Show === "block"){
       this.mainShow();
+      ReactGA.event({
+        category: 'closed blog',
+        action: 'Clicked Link',
+      });
     }
   }
 
@@ -182,10 +221,8 @@ class App extends Component {
   
   render() {
     return (
-      <div>
-        <div className="bodyBackgroundHolder">
-          <div className="bodyBackgroundText"></div>
-        </div>
+      <BrowserRouter>
+      <div onClick={this.closeMobileOnClick}>
         <Nav 
           showNav={this.state.navShow} 
           navState={this.state.navHover}
@@ -207,22 +244,28 @@ class App extends Component {
           blogSwitch = {this.handleBlog}
           closeProject= {this.cancelProjectShow}
         />
-        {<Body 
-          proj={this.state.projects} 
-          hMid={this.state.middleA}
-          test={"testz"}
-          switchB1State = {this.state.body1}
-          showB1State = {this.state.body1Show}
-          closeUpProject = {this.state.closeProjectWindow}
-        />}
+        <div className="bodyBackgroundHolder">
 
-        {<BodyB 
-          switchB2State = {this.state.body2}
-          showB2State = {this.state.body2Show}
-          showMain = { this.mainShow}
-        />}
-
+          <div className="bodyBackgroundText"></div>
+        </div>
+          {<Body 
+            proj={this.state.projects} 
+            hMid={this.state.middleA}
+            test={"testz"}
+            switchB1State = {this.state.body1}
+            showB1State = {this.state.body1Show}
+            closeUpProject = {this.state.closeProjectWindow}
+          >  
+          </Body>}
+    
+          {<BodyB 
+            switchB2State = {this.state.body2}
+            showB2State = {this.state.body2Show}
+            showMain = { this.mainShow}
+          >
+          </BodyB>}
       </div>
+      </BrowserRouter>
     );
   }
 }

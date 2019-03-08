@@ -80,6 +80,11 @@
     background-color: #0775B2;
     color: white;
   } 
+
+  .nav-tab a:hover {
+    background-color: #0775B2;
+    color: white;
+  } 
   
   .nav-tab2 {
     width: 100%;
@@ -90,6 +95,16 @@
   }
   
   .nav-tab2:hover {
+    background-color: #0775B2;
+    color: white !important;
+  }
+
+  .nav-tab2 p:hover {
+    background-color: #0775B2;
+    color: white !important;
+  }
+  
+  .nav-tab2 a:hover {
     background-color: #0775B2;
     color: white !important;
   }

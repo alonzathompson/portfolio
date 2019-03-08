@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactGA from 'react-ga';
 import  './contact.css';
 import axios from 'axios';
 
@@ -28,25 +29,30 @@ class Contact extends Component {
           })
         }, 500)
       } else {
-      const newContact = Object.assign({}, this.state);
-      
-      axios.post('https://aserver1.herokuapp.com/contact/portfolio', newContact)
-        .then(rsp => {
-            this.setState({
-              submitText: rsp.data.message,
-              name: "",
-              email: "",
-              message: ""
-            })
-
-            if(rsp.data.message === "ok"){
+        const newContact = Object.assign({}, this.state);
+        
+        axios.post('https://aserver1.herokuapp.com/contact/portfolio', newContact)
+          .then(rsp => {
               this.setState({
-                formAnim: "animated fadeOutLeft",
-                showMessage: "block",
-                showMessageAnim: "animated fadeInRight delay-2s",
+                submitText: rsp.data.message,
+                name: "",
                 email: "",
+                message: ""
               })
-            }
+
+              ReactGA.event({
+                category: 'submitted data through contact',
+                action: 'Clicked Link'
+              });
+
+              if(rsp.data.message === "ok"){
+                this.setState({
+                  formAnim: "animated fadeOutLeft",
+                  showMessage: "block",
+                  showMessageAnim: "animated fadeInRight delay-2s",
+                  email: "",
+                })
+              }
           })
       } 
       

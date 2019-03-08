@@ -13,13 +13,15 @@ class Footer extends Component {
 
     componentDidMount() {
       window.addEventListener("scroll", (e) => {
-        if(window.scrollY >= this.footerTop.offsetTop - 300){
-          this.setState({
-            show: "flex",
-            bgShowing: "animated fadeIn",
-            height: 0
-          })
-        }
+        if(this.footerTop){
+          if(window.scrollY >= this.footerTop.offsetTop - 300){
+            this.setState({
+              show: "flex",
+              bgShowing: "animated fadeIn",
+              height: 0
+            })
+          }
+        } 
       })
     }
     render() {

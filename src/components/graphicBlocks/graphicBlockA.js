@@ -16,9 +16,9 @@ class GraphicBlockA extends Component {
               </h2>
               <p>
                 Skills with databases include <span className="pHighlights">PostgresSQL</span>,
-                <span className="pHighlights"> MYSQL </span> and <span className="pHighlights"> MongoDB</span>. 
-                Undestanding the importance of persistant data is key to building 
-                solid applications and viable metrics.
+                <span className="pHighlights"> MYSQL </span> and <span className="pHighlights"> MongoDB</span>
+                <span className="pHighlights"> Redis </span>. Undestanding the importance of storing and caching 
+                data is key to building solid applications and viable metrics.
               </p>
             </div>
           </div>
@@ -32,6 +32,7 @@ class GraphicBlockA extends Component {
               <p>
                 Experienced in React, Vue, Redux, Es6, and the modern way of building 
                 web applications. Also Adept in Bootstrap, Materialize, and other css frameworks.
+                Compiling, and transpiling with WebPack and Babel.
               </p>
             </div>
           </div>
@@ -43,9 +44,9 @@ class GraphicBlockA extends Component {
             <div className="cardText">
               <h2>Backend</h2>
               <p>
-                I have been building my experience with Node.js 
-                and the npm ecosystem for some time now. 
-                
+                I started out with Node js and now I'm 
+                currently using Golang. Strict type languages
+                are becoming my favorite.                
               </p>
             </div>
           </div>

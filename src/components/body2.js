@@ -1,6 +1,9 @@
-import React from 'react'
+import React from 'react';
+import LazyLoad from 'react-lazy-load';
 import HeaderB from './header/header2.js';
-//import Footer from './footer/footer.js';
+import BlogList from './blog/bloglist.js';
+import Footer from './footer/footer.js';
+
 
 const BodyB = (props) => {
     return (
@@ -8,12 +11,19 @@ const BodyB = (props) => {
         <HeaderB 
           goBack={props.showMain}
         />
+
         {/*<Basic1 />
         <GraphicBlockA />
         <Basic2 />
         <ProjectList />
         <GraphicBlockB />
-        <Footer />*/}
+        */}
+
+        <BlogList goBack={props.ShowMain}/>
+
+        <LazyLoad offsetTop={600} throttle={150}>
+          <Footer />
+        </LazyLoad>
       </div>
     )
 }

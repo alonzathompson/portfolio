@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './projects.css';
 
 const ProjectItem = props => (
@@ -69,7 +70,9 @@ const ProjectItem = props => (
                 behavior: "smooth"
               });
             }}>
-            more info
+            <NavLink to={`/project/${props.itemText}`}>
+              more info
+            </NavLink>
           </div>
         </div>
       </div>

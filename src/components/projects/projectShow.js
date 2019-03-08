@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import './projects.css';
 
  const ShowProject = (props) => {
@@ -6,6 +7,7 @@ import './projects.css';
     <div className="caseStudyHolders">
       <div className={`caseStudy ${props.projectViewTrans}`} style={{ display: props.projectState }}>
           <div className="bigCard">
+            <NavLink to="/projects">
             <i className="closeProject fa fa-close fa-2x" 
                 onClick={() => {
                   props.closeProject();
@@ -19,7 +21,7 @@ import './projects.css';
                   fontWeight: "800 !important"
                 }}
             />
-
+            </NavLink>
             <div className="project-header">
               <div className="project-image"
                 style={{background: `url(${props.picture}) no-repeat`,

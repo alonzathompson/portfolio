@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from '../../assets/Artraun.svg';
 import './nav.css';
+import { NavLink } from 'react-router-dom';
+import ReactGA from 'react-ga';
 
 const Nav = (props) => {
     return (
@@ -14,21 +16,37 @@ const Nav = (props) => {
                   top: 0,
                   behavior: "smooth"
                 });
+                ReactGA.event({
+                  category: 'home',
+                  action: 'Clicked Link'
+                });
               }}>
-              <img className="limg" src={logo} alt="artraun" height="32px" width="80%"/>
+              <NavLink to="/">
+                <img className="limg" src={logo} alt="artraun" height="32px" width="80%"/>
+              </NavLink>
             </span>
           <section style={{display: "inline-flex"}}> 
+          <NavLink to="/about">
             <div className={props.navState}
-            style={{color: props.nClr}}>
+              style={{color: props.nClr}}>
              <p onClick={() => {
                 window.scrollTo({
                   top: document.querySelector(".basic").offsetTop + 50,
                   behavior: "smooth"
                 });
+                ReactGA.event({
+                  category: 'about',
+                  action: 'Clicked Link'
+                });
               }}>
-                About
+                
+                  About
+                
               </p>
+              
             </div>
+            </NavLink>
+            <NavLink to="/projects">
             <div className={props.navState} 
             style={{color: props.nClr}}>
              <p onClick={() => {
@@ -36,22 +54,38 @@ const Nav = (props) => {
                   top: document.querySelector(".project-list").offsetTop - 50,
                   behavior: "smooth"
                 })
+                ReactGA.event({
+                  category: 'projects',
+                  action: 'Clicked Link'
+                });
              }}>
+              
                 Projects
+              
               </p>
             </div>
+            </NavLink>
+            <NavLink to="/contact" style={{color: props.nClr}}>
             <div className={props.navState}
-            style={{color: props.nClr}}>
-             <p onClick={() => {
-                window.scrollTo({
-                  top: document.querySelector(".block2").offsetTop - 100,
-                  behavior: "smooth"
-                })
-             }}>
-                Contact
+              style={{color: props.nClr}}>
+              <p onClick={() => {
+                  window.scrollTo({
+                    top: document.querySelector(".block2").offsetTop - 100,
+                    behavior: "smooth"
+                  })
+                  ReactGA.event({
+                    category: 'contact',
+                    action: 'Clicked Link'
+                  });
+              }}>
+                
+                    Contact
+                
               </p>
             </div>
-            {/*<div className={props.navState}
+            </NavLink>
+            <NavLink to="/blog" style={{color: props.nClr}}>
+            <div className={props.navState}
             style={{color: props.nClr}}>
              <p onClick={() => {
                  window.scrollTo({
@@ -63,9 +97,12 @@ const Nav = (props) => {
                   props.blogSwitch()
                  }, 1000)
              }}>
+                
                 Blog
+               
               </p>
-            </div>*/}
+            </div>
+            </NavLink>
           </section>
             <span className="mobile-nav-button" 
               onClick={props.mobileHandle}
@@ -87,6 +124,10 @@ const Nav = (props) => {
                   top: document.querySelector(".basic").offsetTop + 50,
                   behavior: "smooth"
                 });
+                ReactGA.event({
+                  category: 'about from mobile',
+                  action: 'Clicked Link'
+                });
               }}>
                 About
               </p>
@@ -99,6 +140,11 @@ const Nav = (props) => {
                   top: document.querySelector(".project-list").offsetTop - 50,
                   behavior: "smooth"
                 })
+
+                ReactGA.event({
+                  category: 'projects from mobile',
+                  action: 'Clicked Link'
+                });
               }}>
                 Projects
               </p>
@@ -111,11 +157,15 @@ const Nav = (props) => {
                   top: document.querySelector(".block2").offsetTop - 100,
                   behavior: "smooth"
                 })
+                ReactGA.event({
+                  category: 'contacts from mobile',
+                  action: 'Clicked Link'
+                });
              }}>
                 Contact
               </p>
             </div>
-            {/*<div className={props.navState}
+            <div className={props.navState}
             style={{color: props.mobileBtnNavColor}}>
              <p onClick={() => {
                props.mobileClose();
@@ -127,10 +177,15 @@ const Nav = (props) => {
                  setTimeout(() => {
                   props.blogSwitch()
                  }, 1000);
+
+                 ReactGA.event({
+                  category: 'from mobile',
+                  action: 'Clicked Link'
+                });
              }}>
                 Blog
               </p>
-            </div>*/}
+            </div>
         </div>
         </div>
       </div>

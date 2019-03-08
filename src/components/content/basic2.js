@@ -37,7 +37,7 @@ class Basic2 extends Component {
             <h2>What can I say</h2>
             <p>
               A studious learner of all things web, I'm addicted to getting better at code and 
-              understanding software architecture. Currently I am learning Python and Docker 
+              understanding software architecture. Currently I am learning Golang and Docker 
               while getting stronger at Javascript and React.
               When I'm not enguaged in development, I enjoy analyzing movies, music and art. 
               The desicions made in the creative process to get to the final product
