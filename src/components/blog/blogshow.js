@@ -35,8 +35,8 @@ import './blog.css';
             </div>
             <div className="single-blog-body">
                 <div className="single-blog-article">
-                    {props.blogArticle.map((item) => {
-                            return <p>{item}</p>
+                    {props.blogArticle.map((item, i) => {
+                            return <p key={i}>{item}</p>
                         })
                     }
 

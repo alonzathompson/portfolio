@@ -24,7 +24,7 @@
 }
 
 .bb:hover {
-    box-shadow: 2px 4px 50px -10px rgba(0,0,0,0.5);
+    text-shadow: 2px 0px 20px rgba(0, 0, 0, 0.8);
 }
 
 .button {
@@ -60,7 +60,7 @@
 }
 
 .single-blog-show {
-    position: fixed;
+    position: absolute;
     z-index: 996;
     top: 0;
     left: 0;

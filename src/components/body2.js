@@ -7,7 +7,7 @@ import Footer from './footer/footer.js';
 
 const BodyB = (props) => {
     return (
-      <div className={`myBody2`} style={{transform: props.switchB2State, display: props.showB2State, backgroundColor: "#143058"}}>
+      <div className={`myBody2`} style={{transform: props.switchB2State, display: props.showB2State, backgroundColor: "#fff", transition: "1s ease-in"}}>
         <HeaderB 
           goBack={props.showMain}
         />

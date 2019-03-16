@@ -3,7 +3,7 @@ import ReactGA from 'react-ga';
 import BloglistItem from './bloglistItem.js'; 
 import BlogShow from './blogshow.js'; 
 import '../content/content.css';
-import logo from '../../assets/Artraun.svg';
+// import logo from '../../assets/artraun.master-web-optimized.svg';
 import architect from '../../assets/architect.jpg';
 import books from '../../assets/books.jpg';
 import './blog.css';
@@ -23,7 +23,7 @@ class BlogList extends Component {
                     pic: architect,
                     article: [`We see all kinds of libraries and frameworks popping up everday parallizing
                         us with more decision making. There are some great libraries and frameworks and some
-                        not so hot selections. For the most part, libraries and frameworks offer organization 
+                        not so hot selections (although all efforts are appluaded). For the most part, libraries and frameworks offer organization 
                         and some neat out of the box tools that allow us to get things accomplished faster. Security 
                         and speed are top priorities. So how do you leverage when to use a library or framework?`,
 
@@ -42,16 +42,16 @@ class BlogList extends Component {
                         every step of the way.`,
                     
                         `Organization is definitely the next priority and could arguably be the first. The more you build out applications,
-                        the more your architectual expands. Those patterns like MVC and MVVC that you couldn't really understand before
+                        the more your architectual prowess expands. Those patterns like MVC and MVVC that you couldn't really understand before
                         become inheritantly clear. Instead of just placing code all over the place, you begin to structure your applications in a way that allows
                         you to make quick changes to your ever growing code base. Even if you leave the work and come back to it, you can quickly
                         look over it and know where to go to make changes.`,
                     
                         `The only reason that I did not put organization first, is because we are in the business of getting things done. Sometimes
                         it's easier to jot down lines of code for quick logic than setting up some grand
-                        scheme for code organization. When using javascript, my first instinct is always vanilla js. At times I need something
-                        on the page that makes a fetch request to layout some data. If I did not get the message at first I get it loud and clear,
-                        it is important to use the right tools for the job.`,
+                        scheme for code organization. When using javascript, my first instinct is always vanilla js. Most of the time I just need something
+                        on the page that makes a fetch request to layout some data. If I did not get the message at first I get it loud and clear.
+                        It is important to use the right tools for the job.`,
                         
                         `PICK YOUR POISON ACCORDINGLY`],
                     likes: 5,
@@ -121,6 +121,41 @@ class BlogList extends Component {
         this.closeCurrentBlog = this.closeCurrentBlog.bind(this);
     }
 
+    componentDidMount(){
+        window.addEventListener("popstate", (e) => {
+           
+            if(window.location.href.match("http://localhost:3000/blog")){
+                this.closeCurrentBlog();
+                setTimeout(() => {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: "smooth"
+                    });
+                }, 2000);
+            }
+
+            if(window.location.href === `http://localhost:3000/blog/${this.state.bList[this.state.currentBlog].id}`){
+                setTimeout(() => {
+                    this.setState({
+                        handleShowBlog: "block",
+                        currentBlog: this.state.currentBlog
+                    });
+                }, 500)
+            }
+      });
+    }
+
+    // componentDidUpdate(prevState) {
+    //     // only update chart if the data has changed
+    //     if (prevState.handleShowBlog !== this.state.handleBlogShow) {
+    //         if(window.location.href.match(`http://localhost:3000/blog/${this.state.currentBlog.id}`) || window.location.pathname.match(`/blog/${this.state.currentBlog.id}`)){
+    //             console.log(this.state.currentBlog)
+    //             console.log(this.state.currentBlog)
+    //             this.getCurrentBlog()
+    //         }
+    //     }
+    //   }
+
     getCurrentBlog(k){
         this.setState({
             handleShowBlog: "block",
@@ -128,7 +163,7 @@ class BlogList extends Component {
         });
 
         ReactGA.event({
-            category: `blog article/${this.state.currentBlog.title}`,
+            category: `blog article/${this.state.bList[this.state.currentBlog].id}`,
             action: 'Clicked Link'
           });
     }
@@ -140,9 +175,9 @@ class BlogList extends Component {
     }
 
     render(){
-        let blogs = this.state.bList.map((blog) =>
+        let blogs = this.state.bList.map((blog, i) =>
         // Correct! Key should be specified inside the array.
-        <BloglistItem key={blog.id}
+        <BloglistItem key={i}
                       id={blog.id}
                       title={blog.title}
                       descript={blog.description} 
@@ -153,10 +188,23 @@ class BlogList extends Component {
 
         return(
             <div className="bloglist-holder">
+                <div style={{
+                    backgroundColor: "rgba(119,119,119,0.2)",
+                    backgroundImage: `url('https://img.freepik.com/free-photo/metal-texture-background_42612-327.jpg?size=626&ext=jpg')`,
+                    padding: "16px",
+                    boxShadow: "0 -2px 10px 1px rgba(0,0,0,0.4)"
+                }}>
+                    <h2 style={{textAlign: "center",
+                        color: "white",
+                        textShadow: '2px 0px 17px rgba(255,255,255,0.8)'
+                    }}>
+                        Quick tid-bits to keep you on the right track.
+                    </h2>
+                </div>
                 <section className="bloglist">
                     {blogs}
                 </section>
-
+                
                 <BlogShow 
                     showBlog={this.state.handleShowBlog}
                     closeBlog={this.closeCurrentBlog}

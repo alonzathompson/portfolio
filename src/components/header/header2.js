@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 // import page404 from '../../assets/404pageBackground.svg';
 // import artraunBlue from '../../assets/artraun-blue.svg';
 // import endOftheroad from '../../assets/endOftheroad.svg';
-import bgHeader2 from '../../assets/blogBackground.jpg';
-import blogLetter from '../../assets/blogLettering.png';
-import logo from '../../assets/Artraun.svg';
+import bgHeader2 from '../../assets/blogHeader2019-optimized.svg';
+// import blogLetter from '../../assets/blogHeader2019text.svg';
+import logo from '../../assets/artraun.master-web-optimized.svg';
 import './header.css';
 
 const HeaderB = (props) => {
@@ -14,10 +14,9 @@ const HeaderB = (props) => {
             <div>
                 <div style={{
                     backgroundImage: `url('${bgHeader2}')`, 
-                    backgroundSize: "100% 100%",
-                    backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center center",
-                    width: "100%"
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    width: '100%'
                 }}>
                     {/* For 404 page */}
                     {/* <div style={{
@@ -75,7 +74,6 @@ const HeaderB = (props) => {
                     </NavLink>
 
                     <div className="blog-header-letters" style={{
-                        backgroundImage: `url('${blogLetter}')`, 
                         backgroundSize: "contain",
                         backgroundRepeat: "no-repeat",
                         backgroundPosition: "center center",
@@ -84,6 +82,7 @@ const HeaderB = (props) => {
                         marginLeft: "10%",
                         marginRight: "10%"
                     }}>
+                        <h1>BLOg</h1>
                     </div>
 
                 </div>

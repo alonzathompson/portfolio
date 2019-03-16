@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import { Route } from 'react-router-dom'
 import ReactGA from 'react-ga';
 import Nav from './components/nav/nav.js';
 import Body from './components/body.js';
@@ -37,9 +38,9 @@ class App extends Component {
       mobileBtnSpacing: "18px",
       switch: "absolute",
       body1Show: "block",
-      body1: `translateX(0)`,
+      body1: `opacity(1)`,
       body2Show: "none",
-      body2: `translateX(800vh)`,
+      body2: `opacity(0)`,
       closeProjectWindow: ``,
       rotation: ``
     }
@@ -57,7 +58,7 @@ class App extends Component {
   componentDidMount() {
     window.addEventListener("scroll", (e) => {
       this.closeMobileNav()
-      if(window.scrollY > window.innerHeight - 200) {
+      if(window.scrollY > 50) {
         this.setState({
           navBackground: "nav-switch",
           navColor: "#0775B2",
@@ -90,8 +91,52 @@ class App extends Component {
         if(this.state.mobileNavClick % 2 === 0){
          this.closeMobileNav();
         }
+    });
 
-        console.log("mobile nav click ", this.state.mobileNavClick)
+    window.addEventListener("popstate", (e) => {
+      if(window.location.href === "http://localhost:3000/" || window.location.href === "http://localhost:3000"){
+        this.mainShow();
+        setTimeout(() => {
+          window.scrollTo({
+          top: 0,
+          behavior: "smooth"
+          })
+      },2000);
+      }
+
+      if(window.location.href === "http://localhost:3000/blog" || window.location.href.match(`http://localhost:3000/blog/`)){
+        this.blogShow();
+      }
+
+      if(window.location.href === "http://localhost:3000/contact" || window.location.pathname === "/contact"){  
+        this.mainShow()
+        setTimeout(() => {
+            window.scrollTo({
+            top: document.querySelector(".block2").offsetTop - 100,
+            behavior: "smooth"
+            })
+        },2000);
+      }
+
+      if(window.location.href === "http://localhost:3000/about"){
+          this.mainShow()
+          setTimeout(() => {
+            window.scrollTo({
+                top: document.querySelector(".basic").offsetTop + 50,
+                behavior: "smooth"
+            });
+          }, 2000);
+      }
+
+      if(window.location.href === "http://localhost:3000/projects"){
+          this.mainShow()
+          setTimeout(() => {
+            window.scrollTo({
+                top: document.querySelector(".project-list").offsetTop - 50,
+                behavior: "smooth"
+            });
+          }, 2000);
+      }
     });
   }
 
@@ -165,9 +210,9 @@ class App extends Component {
       category: 'blog',
       action: 'Clicked Link',
     });
-    
+
     this.setState({
-      body1: "translateX(-800vh)",
+      body1: "opacity(0)",
       body2Show: "block",
       navShow: "none"
       })
@@ -175,24 +220,24 @@ class App extends Component {
       setTimeout(() => {
         this.setState({
           body1Show: "none",
-          body2: "translateX(0)"
+          body2: "opacity(1)"
         })
       }, 1000)
   }
 
   mainShow() {
     this.setState({
-      body2: "translateX(800vh)",
+      body2: "opacity(0)",
       body1Show: "block"
       })
 
       setTimeout(() => {
         this.setState({
           body2Show: "none",
-          body1: "translateX(0)",
+          body1: "opacity(1)",
           navShow: "block"
         })
-        window.location.hash = "";
+        // window.location.hash = "";
       }, 1000)
   }
 
@@ -203,7 +248,9 @@ class App extends Component {
         category: 'Opened blog',
         action: 'Clicked Link',
       });
+      console.log(window.onpopstate);
     } else if(this.state.body2Show === "block"){
+     
       this.mainShow();
       ReactGA.event({
         category: 'closed blog',
@@ -221,7 +268,7 @@ class App extends Component {
   
   render() {
     return (
-      <BrowserRouter>
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
       <div onClick={this.closeMobileOnClick}>
         <Nav 
           showNav={this.state.navShow} 
@@ -244,10 +291,7 @@ class App extends Component {
           blogSwitch = {this.handleBlog}
           closeProject= {this.cancelProjectShow}
         />
-        <div className="bodyBackgroundHolder">
-
-          <div className="bodyBackgroundText"></div>
-        </div>
+      
           {<Body 
             proj={this.state.projects} 
             hMid={this.state.middleA}

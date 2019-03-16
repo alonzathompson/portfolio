@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import bg from '../../assets/cafe.vid';
+import mainBG from '../../assets/header2019.svg';
 
 class Header extends Component{
     constructor(props){
@@ -9,44 +9,37 @@ class Header extends Component{
         }
     }
 
-    componentWillMount(){ 
-        window.addEventListener("scroll", () => {
-            if(window.scrollY > window.innerHeight){
-                if(this.vid !== null){
-                this.myVid.pause();
-              }
-            } else if(window.scrollY < window.innerHeight){
-                if(this.vid !== null){
-                    this.myVid.play();
-                }
-            }
+    // componentWillMount(){ 
+    //     window.addEventListener("scroll", () => {
+    //         if(window.scrollY > window.innerHeight){
+    //             if(this.vid !== null){
+    //             this.myVid.pause();
+    //           }
+    //         } else if(window.scrollY < window.innerHeight){
+    //             if(this.vid !== null){
+    //                 this.myVid.play();
+    //             }
+    //         }
 
-            if(window.scrollY > window.innerHeight - 500){
-                this.setState({
-                    textDisplay:`none`
-                })
-            } else {
-                this.setState({
-                    textDisplay:`block`
-                })    
-            }
-        })
-    }
+    //         if(window.scrollY > window.innerHeight - 500){
+    //             this.setState({
+    //                 textDisplay:`none`
+    //             })
+    //         } else {
+    //             this.setState({
+    //                 textDisplay:`block`
+    //             })    
+    //         }
+    //     })
+    // }
 
     render(){
         return (
             <section className="header vcontainer">
                 <div className="vidContainer">
-                {<video autoPlay={true}
-                    loop="loop" 
-                    muted="muted" 
-                    preload="auto"
-                    ref={daVid => this.myVid = daVid}
-                >
-                    <source src={bg} type="video/mp4" />
-                    Your browser does not support the video tag.
-                </video>}
-                <div className="voverlay"></div>
+                    <div className="imageHeader">
+                        <img src={mainBG} alt="Kiwi standing on oval" width="100%" height="auto" />
+                    </div>
                 </div>
                 <div className={`header-border-text`} style={{ display: this.state.textDisplay}}>
                     <h1>
@@ -54,7 +47,7 @@ class Header extends Component{
                     </h1>
                     <p>Together we can achieve anything.</p>
                 </div>
-                <div className="header-chev" style={{ display: this.state.textDisplay}}
+                {/* <div className="header-chev" style={{ display: this.state.textDisplay}}
                 onClick={() => {
                     window.scrollTo({
                         top: document.querySelector(".basic").offsetTop - 100,
@@ -62,7 +55,7 @@ class Header extends Component{
                       })
                 }}>
                     <i className="fa fa-chevron-down fa-3x" />
-                </div>
+                </div> */}
             </section>
         )
     }

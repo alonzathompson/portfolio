@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../assets/Artraun.svg';
+import logo from '../../assets/artraun.master-web-optimized.svg';
 import './nav.css';
 import { NavLink } from 'react-router-dom';
 import ReactGA from 'react-ga';
@@ -89,13 +89,12 @@ const Nav = (props) => {
             style={{color: props.nClr}}>
              <p onClick={() => {
                  window.scrollTo({
-                  top: 0,
-                  behavior: "smooth"
+                  top: 0
                  })
 
                  setTimeout(() => {
                   props.blogSwitch()
-                 }, 1000)
+                 }, 500)
              }}>
                 
                 Blog

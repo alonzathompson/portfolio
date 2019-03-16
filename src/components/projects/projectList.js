@@ -5,7 +5,7 @@ import calculator from '../../assets/calculator_portfolioSmall.jpg';
 import songTracker from '../../assets/vuesongtracker.jpeg';
 import redux from '../../assets/reduxnewportfolioSmall.jpg';
 import acr from '../../assets/RfidEmployee.jpg';
-import phone from '../../assets/phoneCss.jpg';
+// import phone from '../../assets/phoneCss.jpg';
 import ShowProject from './projectShow.js';
 import './projects.css';
 

@@ -6,6 +6,7 @@ const BloglistItem = props => (
   <div className="bloglist-items">
     <h1>{props.title}</h1>
     <h3>{props.descript}</h3>
+    <NavLink to={`/blog/${props.id}`} className="bli">
     <div className="button blog-utils" onClick={() => {
       props.getBlog(props.id)
       window.scrollTo({
@@ -13,10 +14,10 @@ const BloglistItem = props => (
         behavior: "smooth"
       })
     }}>
-      <NavLink to={`/blog/${props.title}`} className="bli">
+      
         more ...
-      </NavLink>
     </div>
+    </NavLink>
     {/* <p className="blog-utils">likes: 
       <span className="blogLikes">{props.getLikes}</span>
       <span className="blogComments">comments: {props.getComments}</span>

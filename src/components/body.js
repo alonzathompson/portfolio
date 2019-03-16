@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router-dom';
+// import { Route } from 'react-router-dom';
 import LazyLoad from 'react-lazy-load';
 import Header from './header/header.js';
 import Basic1 from './content/basic1.js';
