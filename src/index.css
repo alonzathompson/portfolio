@@ -256,7 +256,6 @@ h2 {
   -o-transition: transform .5s ease-in-out;
   transition: transform .5s ease-in-out;
   transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
-  overflow-x: hidden;
 }
 
 .button {
@@ -276,3 +275,8 @@ h2 {
   overflow-x: hidden;
 }
 
+@media screen and (max-width: 600px){
+  .myBody2{
+    overflow-x: hidden;
+  }
+}
